@@ -93,15 +93,7 @@
                             <a href="/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Ovqatlar
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/masalliq" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Masalliqlar
+                                    University
                                 </p>
                             </a>
                         </li>
