@@ -4,9 +4,9 @@ use App\Http\Controllers\MasalliqController;
 use App\Http\Controllers\OvqatController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/',[OvqatController::class,'index'])->name('ovqat.index');
 Route::post('/ovqat-create',[OvqatController::class,'store'])->name('ovqat.store');
