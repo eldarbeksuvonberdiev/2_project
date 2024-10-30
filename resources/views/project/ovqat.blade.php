@@ -85,7 +85,8 @@
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="view{{ $model->id }}">Modal title
+                                                            <h1 class="modal-title fs-5" id="view{{ $model->id }}">Modal
+                                                                title
                                                             </h1>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                                 aria-label="Close"></button>
@@ -94,43 +95,34 @@
                                                             <div class="row">
                                                                 <div class="col-12 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <form action="{{ route('ovqat.put', $model->id) }}"
-                                                                            method="POST">
-                                                                            @csrf
-                                                                            @method('PUT')
-                                                                            <div class="mb-3">
-                                                                                <label for="name"
-                                                                                    class="form-label">Name</label>
-                                                                                <input type="text" name="name"
-                                                                                    class="form-control" id="name"
-                                                                                    value="{{ $model->name }}" disabled>
-                                                                            </div>
-                                                                            <label>Masalliqlar</label>
-                                                                            <div class="select2-purple">
-                                                                                <select class="select2" name="masalliqlar[]"
-                                                                                    multiple="multiple"
-                                                                                    data-placeholder="Select a State"
-                                                                                    data-dropdown-css-class="select2-purple"
-                                                                                    style="width: 100%;" disabled>
-                                                                                    @foreach ($masalliqs as $masalliq)
-                                                                                        <option value="{{ $masalliq->id }}"
-                                                                                            @foreach ($model->masalliqs as $item)
+                                                                        <div class="mb-3">
+                                                                            <label for="name"
+                                                                                class="form-label">Name</label>
+                                                                            <input type="text" name="name"
+                                                                                class="form-control" id="name"
+                                                                                value="{{ $model->name }}" disabled>
+                                                                        </div>
+                                                                        <label>Masalliqlar</label>
+                                                                        <div class="select2-purple">
+                                                                            <select class="select2" name="masalliqlar[]"
+                                                                                multiple="multiple"
+                                                                                data-placeholder="Select a State"
+                                                                                data-dropdown-css-class="select2-purple"
+                                                                                style="width: 100%;" disabled>
+                                                                                @foreach ($masalliqs as $masalliq)
+                                                                                    <option value="{{ $masalliq->id }}"
+                                                                                        @foreach ($model->masalliqs as $item)
                                                                                             @if ($item->id == $masalliq->id)
                                                                                                 {{ 'selected' }}
                                                                                             @endif @endforeach>
-                                                                                            {{ $masalliq->name }}</option>
-                                                                                    @endforeach
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="modal-footer">
-                                                                                <button type="button"
-                                                                                    class="btn btn-secondary"
-                                                                                    data-bs-dismiss="modal">Close</button>
-                                                                                <button type="submit"
-                                                                                    class="btn btn-primary">Save
-                                                                                    changes</button>
-                                                                            </div>
-                                                                        </form>
+                                                                                        {{ $masalliq->name }}</option>
+                                                                                @endforeach
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
