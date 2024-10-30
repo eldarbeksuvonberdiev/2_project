@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Masalliq;
 use App\Http\Controllers\Controller;
+use App\Models\Ovqat;
 use Illuminate\Http\Request;
 
 class MasalliqController extends Controller
@@ -14,7 +15,8 @@ class MasalliqController extends Controller
     public function index()
     {
         $models = Masalliq::all();
-        return view('project.masalliq',['models'=>$models]);
+        $ovqats = Ovqat::all();
+        return view('project.masalliq',['models'=>$models,'ovqats'=>$ovqats]);
     }
 
     /**
