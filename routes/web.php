@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ovqat',[OvqatController::class,'index'])->name('ovqat.index');
+Route::get('/',[OvqatController::class,'index'])->name('ovqat.index');
 Route::post('/ovqat-create',[OvqatController::class,'store'])->name('ovqat.store');
 Route::put('/ovqat-update/{ovqat}',[OvqatController::class,'update'])->name('ovqat.put');
 
