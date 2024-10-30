@@ -12,7 +12,7 @@
             </button>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="create" aria-hidden="true">
+            <div class="modal fade" id="create" tabindex="-1" aria-labelledby="create" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -75,12 +75,12 @@
                                         <td>{{ $model->name }}</td>
                                         <td>
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#edit{{ $model->id }}" style="width: 80px">
+                                                data-bs-target="#view{{ $model->id }}" style="width: 80px">
                                                 {{ $model->masalliqs->count() }}
                                             </button>
 
                                             <!-- Modal -->
-                                            <div class="modal fade" id="edit{{ $model->id }}" tabindex="-1"
+                                            <div class="modal fade" id="view{{ $model->id }}" tabindex="-1"
                                                 aria-labelledby="view{{ $model->id }}" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
