@@ -45,9 +45,9 @@ class DatabaseSeeder extends Seeder
         //     ]);
         // }
 
-        // for ($i=1; $i < 11; $i++) { 
-        //     University::create(['name'=> 'University'.$i]);
-        // }
+        for ($i=1; $i < 11; $i++) { 
+            University::create(['name'=> 'University'.$i]);
+        }
 
         for ($i=1; $i < 11; $i++) { 
             Faculty::create(['university_id' => rand(1,10),'name'=> 'Faculty'.$i]);
@@ -69,9 +69,9 @@ class DatabaseSeeder extends Seeder
             Address::create(['name'=> 'Address'.$i]);
         }
 
-        // for ($i=1; $i < 2000; $i++) { 
-        //     Student::create(['group_id'=>rand(1,10),'address_id' => rand(1,10),'name'=> 'student'.$i,'phone'=>fake()->phoneNumber(),'image'=>fake()->address()]);
-        // }
+        for ($i=1; $i < 2000; $i++) { 
+            Student::create(['group_id'=>rand(1,10),'address_id' => rand(1,10),'name'=> 'student'.$i,'phone'=>fake()->phoneNumber(),'image'=>fake()->address()]);
+        }
 
     }
 }
