@@ -13,7 +13,18 @@ class UniversityController extends Controller
      */
     public function index()
     {
-        $universities = University::all();
+        $universities = University::select('universities.id','universities.name')
+        ->leftJoin('faculties','faculties.university_id','=','universities.id')
+        ->leftJoin('fields','fields.faculty_id','=','faculties.id')
+        ->leftJoin('groups','groups.field_id','=','fields.id')
+        ->leftJoin('students','students.group_id','=','groups.id')
+        ->groupBy('universities.id','universities.name')
+        ->selectRaw('
+        COUNT(DISTINCT faculties.id) AS fa_count,
+        COUNT(DISTINCT fields.id) AS fi_count,
+        COUNT(DISTINCT groups.id) AS g_count,
+        COUNT(DISTINCT students.id) AS s_count
+        ')->get();
         return view('university.index',['universities' => $universities]);
     }
 

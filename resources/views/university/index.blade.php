@@ -56,10 +56,10 @@
                                     <tr>
                                         <td>{{ $university->id }}</td>
                                         <td>{{ $university->name }}</td>
-                                        <td>{{ $university->faculties->count() }}</td>
-                                        <td>{{ $university->faculties->count() }}</td>
-                                        <td>{{ $university->faculties->count() }}</td>
-                                        <td>{{ $university->faculties->count() }}</td>
+                                        <td>{{ $university->fa_count }}</td>
+                                        <td>{{ $university->fi_count }}</td>
+                                        <td>{{ $university->g_count }}</td>
+                                        <td>{{ $university->s_count }}</td>
                                         <td>
                                             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit{{ $university->id}}">
                                                 Edit
