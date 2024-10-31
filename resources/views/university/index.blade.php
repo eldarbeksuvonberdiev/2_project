@@ -49,6 +49,7 @@
                                     <th>Groups</th>
                                     <th>Students</th>
                                     <th>Edit University</th>
+                                    <th>Delete University</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -89,6 +90,13 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </td>
+                                        <td>
+                                            <form action="{{ route('university.delete',$university->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" type="submit">DELETE</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

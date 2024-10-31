@@ -82,6 +82,7 @@ class UniversityController extends Controller
      */
     public function destroy(University $university)
     {
-        //
+        $university->delete();
+        return redirect()->route('university');
     }
 }

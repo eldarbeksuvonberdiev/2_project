@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[UniversityController::class,'index'])->name('university');
 Route::post('/university-create',[UniversityController::class,'store'])->name('university.create');
 Route::put('/university-update/{university}',[UniversityController::class,'update'])->name('university.update');
+Route::delete('/university-delete/{university}',[UniversityController::class,'destroy'])->name('university.delete');
