@@ -22,7 +22,7 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label for="name" class="form-label">University name</label>
-                                    <input type="text" name="name" class="form-control" id="name">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="TATU...">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
